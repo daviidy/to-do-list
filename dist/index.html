@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-Dos app</title>
+    <script src="https://kit.fontawesome.com/d86848cfe0.js"></script>
+  </head>
+  <body>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 bg-light full-height p-4">
+          <a class="font-weight-bold text-dark pointer" data-toggle="collapse" data-target="#projects">
+            Projects <i class="fas fa-angle-down"></i>
+          </a>
+          <div id="projects" class="collapse">
+            <ul>
+              <li>
+                <a href="#" class="text-dark">Default</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark">Project 1</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark">Project 1</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="mx-auto w-75 pt-5 flex-column">
+            <h2 class="font-weight-bold">Default</h2>
+            <a class="text-dark pointer" href="#" data-toggle="modal" data-target="#newTask">
+              Add a new task <i class="fas fa-plus"></i>
+            </a>
+
+            <div class="tasks">
+              <ul>
+                <li class="border-bottom p-3 pointer d-flex">
+                  Task 1
+                  <div class="ml-auto">
+                    <i class="fas fa-pencil-alt"></i>
+                    <i class="far fa-eye"></i>
+                  </div>
+                </li>
+                <li class="border-bottom p-3 pointer d-flex">
+                  Task 1
+                  <div class="ml-auto">
+                    <i class="fas fa-pencil-alt"></i>
+                    <i class="far fa-eye"></i>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- The Modal -->
+      <div class="modal" id="newTask">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Add a new task</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" class="form-control" placeholder="Enter title" id="title">
+                </div>
+                <div class="form-group">
+                  <label for="description">Description:</label>
+                  <textarea name="description" id="description" rows="8" cols="60"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="date">Date</label>
+                  <input type="date" class="form-control" placeholder="Enter due date" id="date">
+                </div>
+                <div class="form-group">
+                  <label for="priority">Priority</label>
+                  <input type="number" class="form-control" placeholder="eg. 1" id="priority">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
