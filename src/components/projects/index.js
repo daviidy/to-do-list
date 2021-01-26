@@ -5,7 +5,7 @@ const index = () => {
   while(i--){
     values[keys[i]] = localStorage.getItem(keys[i])
   }
-  return values
+  return values 
 }
 
 export default index

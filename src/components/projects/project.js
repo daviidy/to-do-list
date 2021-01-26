@@ -1,6 +1,7 @@
 class Project {
   constructor(title){
     this._title = title
+    this._createdAt = Date.now()
     this._todos = []
   }
 
