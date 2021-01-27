@@ -40,4 +40,4 @@ class Todo {
 
 }
 
-export default Project
+export default Todo
