@@ -1,4 +1,4 @@
-const showProjectToDom = (project) => {
+const showProjectToDom = (project, projectID) => {
     const projectHoler= document.getElementById("projects-holder")
     const projectsList = document.getElementById('project-details')
     while(projectsList.firstChild){
@@ -15,6 +15,7 @@ const showProjectToDom = (project) => {
     link.classList.add('pointer')
     link.setAttribute("data-toggle","modal")
     link.setAttribute("data-target","#newTask")
+    link.setAttribute("id",projectID)
  
     const iTag= document.createElement('i');
     iTag.classList.add("fas","fa-plus")
