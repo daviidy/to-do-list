@@ -4,6 +4,7 @@ import './style.css';
 import addProject from './components/projects/addProject'
 import addProjectToDom from './components/projects/addProjectToDom'
 import index from './components/projects/index'
+import showProject from "./components/projects/showProject"
 
 //display all the projects
 const projects = index()
@@ -25,9 +26,12 @@ buttonProject.addEventListener('click', (event) => {
 })
 
 for (let i = 0; i < allProjects.length; i++) {
+  // console.log(allProjects[i])
   allProjects[i].addEventListener('click', (event) => {
     event.preventDefault()
     let id = allProjects[i].getAttribute('id')
+    showProject(id);
+    
     console.log(id)
   })
 }
