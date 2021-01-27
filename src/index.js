@@ -8,10 +8,10 @@ import showProject from "./components/projects/showProject"
 import addTask from './components/todos/addTask';
 
 //display all the projects
-// const projects = index()
-// Object.entries(projects).map(([key,value]) => {
-//   addProjectToDom(JSON.parse(value)._title, key)
-// })
+const projects = index()
+Object.entries(projects).map(([key,value]) => {
+  addProjectToDom(JSON.parse(value)._title, key)
+})
 
 
 const buttonProject = document.getElementById('newProjectButton')
@@ -32,7 +32,7 @@ for (let i = 0; i < allProjects.length; i++) {
     event.preventDefault()
     let id = allProjects[i].getAttribute('id')
     showProject(id);
-    
+
     console.log(id)
   })
 
