@@ -1,5 +1,6 @@
 import Todo from './todo'
 import addTaskToDom from './addTaskToDom'
+import index from "../projects/index";
 
 const addTask = (title, description, dueDate, priority, projectId) => {
   let todo = new Todo(title, description, dueDate, priority)
@@ -7,7 +8,12 @@ const addTask = (title, description, dueDate, priority, projectId) => {
   const taskId = "task-"+Date.now()
   project._todos.push(todo)
   localStorage[projectId] = JSON.stringify(project)
-  //addProjectToDom(project.titleProp, projectId)
+
+ 
+   addTaskToDom(JSON.parse(localStorage[projectId])._todos)
+  // console.log(JSON.parse(localStorage[projectId]))
+
+  
 }
 
 export default addTask

@@ -1,8 +1,14 @@
+import addTaskToDom from  "../todos/addTaskToDom"
 const showProjectToDom = (project, id) => {
     const projectHoler= document.getElementById("projects-holder")
     const projectsList = document.getElementById('project-details')
+   const tasks= document.getElementById("tasks")
     while(projectsList.firstChild){
         projectsList.removeChild(projectsList.lastChild)
+
+    }
+    while(tasks.firstChild){
+        tasks.removeChild(tasks.lastChild)
 
     }
 
@@ -25,6 +31,10 @@ const showProjectToDom = (project, id) => {
     link.append(iTag)
     projectsList.prepend(link)
     projectsList.prepend(item)
+
+    console.log(project._todos)
+    addTaskToDom(project._todos)
+    
 
   }
 
