@@ -16,7 +16,7 @@ Our project can be found at https://github.com/daviidy/to-do-list
 
 ## Live Demo
 
-You can find the demo [here](https://daviidy.github.io/restaurant-page/)
+You can find the demo [here](https://daviidy.github.io/to-do-list/)
 
 
 ## To run the project in local
