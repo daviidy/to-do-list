@@ -13,8 +13,6 @@ const showProjectToDom = (project, id) => {
   const item = document.createElement('h2');
   item.classList.add('font-weight-bold');
 
-
-<<<<<<< HEAD
   const link = document.createElement('a');
   link.classList.add('text-dark');
   link.classList.add('pointer');
@@ -30,13 +28,9 @@ const showProjectToDom = (project, id) => {
   link.append(iTag);
   projectsList.prepend(link);
   projectsList.prepend(item);
-=======
-    console.log(project._todos)
-    addTaskToDom(project._todos)
-    
->>>>>>> parent of fa8df38... refactor addProjectToDom.js. removed all the console.log
 
   addTaskToDom(project.todos);
 };
+
 
 export default showProjectToDom;
