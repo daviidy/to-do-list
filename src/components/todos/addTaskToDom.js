@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 /* eslint-disable import/no-cycle */
 import editTask from './editTask';
 import showTask from './showTask';
 import deteleTask from './deleteTask';
+=======
+import editTask from './editTask'
+import showTask from './showTask'
+>>>>>>> parent of fa8df38... refactor addProjectToDom.js. removed all the console.log
 
 const addTaskToDom = (project) => {
   const tasks = document.getElementById('tasks');
@@ -33,6 +38,7 @@ const addTaskToDom = (project) => {
     linkShow.setAttribute('data-toggle', 'modal');
     linkShow.setAttribute('data-target', '#showTask');
 
+<<<<<<< HEAD
     const iTagView = document.createElement('i');
     iTagView.classList.add('far', 'fa-eye');
 
@@ -41,6 +47,13 @@ const addTaskToDom = (project) => {
 
     const iTagDelete = document.createElement('i');
     iTagDelete.classList.add('fas', 'fa-trash', 'text-danger');
+=======
+  // appending elements
+  taskDiv.append(linkEdit);
+  linkEdit.append(iTagEdit);
+  taskDiv.append(linkShow)
+  linkShow.append(iTagView);
+>>>>>>> parent of fa8df38... refactor addProjectToDom.js. removed all the console.log
 
     // appending elements
     taskDiv.append(linkEdit);
@@ -74,6 +87,7 @@ const addTaskToDom = (project) => {
     });
   }
 
+<<<<<<< HEAD
   const deleteTaskLinks = document.getElementsByClassName('fa-trash');
   for (let i = 0; i < deleteTaskLinks.length; i + 1) {
     deleteTaskLinks[i].parentElement.addEventListener('click', () => {
@@ -82,3 +96,7 @@ const addTaskToDom = (project) => {
   }
 };
 export default addTaskToDom;
+=======
+}
+export default addTaskToDom
+>>>>>>> parent of fa8df38... refactor addProjectToDom.js. removed all the console.log
