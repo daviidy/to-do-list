@@ -32,9 +32,8 @@ const showProjectToDom = (project, id) => {
     projectsList.prepend(link)
     projectsList.prepend(item)
 
-    console.log(project._todos)
     addTaskToDom(project._todos)
-    
+
 
   }
 

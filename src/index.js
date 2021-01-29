@@ -7,6 +7,7 @@ import index from './components/projects/index'
 import showProject from "./components/projects/showProject"
 import addTask from './components/todos/addTask'
 
+//display all projects when loading the nthe page
 const projects = index()
 Object.entries(projects).map(([key,value]) => {
   addProjectToDom(JSON.parse(value)._title, key)
@@ -15,8 +16,8 @@ Object.entries(projects).map(([key,value]) => {
 
 const buttonProject = document.getElementById('newProjectButton')
 const titleProject = document.getElementById('titleProject')
-const allProjects = document.getElementsByClassName('project')
 
+// add a new project
 buttonProject.addEventListener('click', (event) => {
   event.preventDefault()
   if (titleProject.value !== '') {
@@ -24,21 +25,13 @@ buttonProject.addEventListener('click', (event) => {
   }
 })
 
-for (let i = 0; i < allProjects.length; i++) {
-  allProjects[i].addEventListener('click', (event) => {
-    event.preventDefault()
-    let id = allProjects[i].getAttribute('id')
-    showProject(id);
-  })
-}
-
 const taskTitle= document.getElementById("title");
 const taskDescription= document.getElementById("description");
 const taskDate= document.getElementById("date");
 const taskPriority= document.getElementById("priority");
 const taskButton= document.getElementById("taskButton");
 
-
+// add a new task
 taskButton.addEventListener("click", (event)=>{
   event.preventDefault()
   if(taskTitle.value!=="" && taskDescription.value!=="" && taskDate.value!==""&& taskPriority.value!==""){

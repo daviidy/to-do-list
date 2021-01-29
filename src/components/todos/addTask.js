@@ -9,11 +9,10 @@ const addTask = (title, description, dueDate, priority, projectId) => {
   project._todos.push(todo)
   localStorage[projectId] = JSON.stringify(project)
 
- 
-   addTaskToDom(JSON.parse(localStorage[projectId])._todos)
-  // console.log(JSON.parse(localStorage[projectId]))
 
-  
+  addTaskToDom(JSON.parse(localStorage[projectId])._todos)
+
+
 }
 
 export default addTask

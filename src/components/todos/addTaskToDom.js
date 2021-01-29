@@ -1,5 +1,6 @@
 import editTask from './editTask'
 import showTask from './showTask'
+import deteleTask from './deleteTask'
 
 const addTaskToDom =(project)=>{
 
@@ -37,11 +38,19 @@ const addTaskToDom =(project)=>{
   const iTagView= document.createElement("i");
   iTagView.classList.add("far", "fa-eye");
 
+  const linkDelete = document.createElement("a");
+  linkDelete.classList.add('pointer')
+
+  const iTagDelete= document.createElement("i");
+  iTagDelete.classList.add("fas", "fa-trash", 'text-danger');
+
   // appending elements
   taskDiv.append(linkEdit);
   linkEdit.append(iTagEdit);
   taskDiv.append(linkShow)
   linkShow.append(iTagView);
+  taskDiv.append(linkDelete)
+  linkDelete.append(iTagDelete);
 
   liElement.append(project[i]._title);
   liElement.append(taskDiv);
@@ -65,6 +74,13 @@ const addTaskToDom =(project)=>{
   for (let i = 0; i < viewTaskLinks.length; i++) {
     viewTaskLinks[i].parentElement.addEventListener('click', (event) => {
       showTask(projectId, i)
+    })
+  }
+
+  const deleteTaskLinks = document.getElementsByClassName('fa-trash')
+  for (let i = 0; i < deleteTaskLinks.length; i++) {
+    deleteTaskLinks[i].parentElement.addEventListener('click', (event) => {
+      deteleTask(projectId, i)
     })
   }
 
