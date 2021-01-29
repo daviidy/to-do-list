@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable no-underscore-dangle */
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
@@ -6,10 +8,10 @@ import addProjectToDom from './components/projects/addProjectToDom';
 import index from './components/projects/index';
 import addTask from './components/todos/addTask';
 
+// display all projects when loading the nthe page
 const projects = index();
-// eslint-disable-next-line array-callback-return
 Object.entries(projects).map(([key, value]) => {
-  addProjectToDom(JSON.parse(value).title, key);
+  addProjectToDom(JSON.parse(value)._title, key);
 });
 
 

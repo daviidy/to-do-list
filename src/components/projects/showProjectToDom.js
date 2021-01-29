@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import addTaskToDom from '../todos/addTaskToDom';
 
 const showProjectToDom = (project, id) => {
@@ -23,13 +24,13 @@ const showProjectToDom = (project, id) => {
   const iTag = document.createElement('i');
   iTag.classList.add('fas', 'fa-plus');
 
-  item.innerHTML = project.title;
+  item.innerHTML = project._title;
   link.innerHTML = 'Add a new task';
   link.append(iTag);
   projectsList.prepend(link);
   projectsList.prepend(item);
 
-  addTaskToDom(project.todos);
+  addTaskToDom(project._todos);
 };
 
 

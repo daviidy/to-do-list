@@ -1,8 +1,9 @@
+/* eslint-disable no-plusplus */
 const index = () => {
   const values = {};
   const keys = Object.keys(localStorage);
-  const i = keys.length;
-  while (i - 1) {
+  let i = keys.length;
+  while (i--) {
     values[keys[i]] = localStorage.getItem(keys[i]);
   }
   return values;
