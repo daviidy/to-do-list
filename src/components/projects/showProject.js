@@ -1,10 +1,10 @@
-import Project from './project'
-import showProjectToDom from './showProjectToDom'
+import Project from './project';
+import showProjectToDom from './showProjectToDom';
 
 const showProject = (projectId) => {
-  const project = JSON.parse(localStorage.getItem(projectId))
-  showProjectToDom(project, projectId)
-}
+  const project = JSON.parse(localStorage.getItem(projectId));
+  showProjectToDom(project, projectId);
+};
 
 
-export default showProject
+export default showProject;

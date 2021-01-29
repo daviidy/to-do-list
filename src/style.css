@@ -10,7 +10,7 @@ a:hover {
   height: 100vh;
 }
 
-#projects ul,
-.tasks ul {
+.tasks ul,
+#projects ul {
   list-style-type: circle;
 }

@@ -1,9 +1,9 @@
-import showTaskToDom from './showTaskToDom'
+import showTaskToDom from './showTaskToDom';
 
 const showTask = (projectId, i) => {
-  const project = JSON.parse(localStorage.getItem(projectId))
-  const task = project._todos[i]
-  showTaskToDom(task)
-}
+  const project = JSON.parse(localStorage.getItem(projectId));
+  const task = project._todos[i];
+  showTaskToDom(task);
+};
 
-export default showTask
+export default showTask;
