@@ -1,41 +1,42 @@
+/* eslint-disable no-underscore-dangle */
 class Todo {
   constructor(title, description, dueDate, priority) {
-    this.title = title;
-    this.description = description;
-    this.dueDate = dueDate;
-    this.priority = priority;
+    this._title = title;
+    this._description = description;
+    this._dueDate = dueDate;
+    this._priority = priority;
   }
 
   get titleProp() {
-    return this.title;
+    return this._title;
   }
 
   set titleProp(updatedTitle) {
-    this.title = updatedTitle;
+    this._title = updatedTitle;
   }
 
   get descriptionProp() {
-    return this.description;
+    return this._description;
   }
 
   set descriptionProp(updatedDescription) {
-    this.description = updatedDescription;
+    this._description = updatedDescription;
   }
 
   get dueDateProp() {
-    return this.dueDate;
+    return this._dueDate;
   }
 
   set dueDateProp(updatedDate) {
-    this.dueDate = updatedDate;
+    this._dueDate = updatedDate;
   }
 
   get priorityProp() {
-    return this.priority;
+    return this._priority;
   }
 
   set priorityProp(updatedPriority) {
-    this.priority = updatedPriority;
+    this._priority = updatedPriority;
   }
 }
 

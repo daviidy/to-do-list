@@ -1,20 +1,21 @@
+/* eslint-disable no-underscore-dangle */
 class Project {
   constructor(title) {
-    this.title = title;
-    this.createdAt = Date.now();
-    this.todos = [];
+    this._title = title;
+    this._createdAt = Date.now();
+    this._todos = [];
   }
 
   get titleProp() {
-    return this.title;
+    return this._title;
   }
 
   get todosProp() {
-    return this.todos;
+    return this._todos;
   }
 
   set todosProp(updatedTodos) {
-    this.todos = updatedTodos;
+    this._todos = updatedTodos;
   }
 }
 
