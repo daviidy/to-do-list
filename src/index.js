@@ -4,13 +4,12 @@ import './style.css';
 import addProject from './components/projects/addProject';
 import addProjectToDom from './components/projects/addProjectToDom';
 import index from './components/projects/index';
-import showProject from './components/projects/showProject';
 import addTask from './components/todos/addTask';
 
-// display all projects when loading the nthe page
 const projects = index();
+// eslint-disable-next-line array-callback-return
 Object.entries(projects).map(([key, value]) => {
-  addProjectToDom(JSON.parse(value)._title, key);
+  addProjectToDom(JSON.parse(value).title, key);
 });
 
 

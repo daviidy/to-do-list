@@ -1,8 +1,8 @@
 const index = () => {
   const values = {};
   const keys = Object.keys(localStorage);
-  let i = keys.length;
-  while (i--) {
+  const i = keys.length;
+  while (i - 1) {
     values[keys[i]] = localStorage.getItem(keys[i]);
   }
   return values;

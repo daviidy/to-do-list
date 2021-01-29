@@ -1,20 +1,20 @@
 class Project {
   constructor(title) {
-    this._title = title;
-    this._createdAt = Date.now();
-    this._todos = [];
+    this.title = title;
+    this.createdAt = Date.now();
+    this.todos = [];
   }
 
   get titleProp() {
-    return this._title;
+    return this.title;
   }
 
   get todosProp() {
-    return this._todos;
+    return this.todos;
   }
 
   set todosProp(updatedTodos) {
-    this._todos = updatedTodos;
+    this.todos = updatedTodos;
   }
 }
 

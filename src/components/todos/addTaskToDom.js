@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import editTask from './editTask';
 import showTask from './showTask';
 import deteleTask from './deleteTask';
@@ -9,7 +10,7 @@ const addTaskToDom = (project) => {
     tasks.removeChild(tasks.lastChild);
   }
 
-  for (let i = 0; i < project.length; i++) {
+  for (let i = 0; i < project.length; i + 1) {
     const taskCard = document.getElementById('tasks');
     const ulElement = document.createElement('ul');
 
@@ -49,7 +50,7 @@ const addTaskToDom = (project) => {
     taskDiv.append(linkDelete);
     linkDelete.append(iTagDelete);
 
-    liElement.append(project[i]._title);
+    liElement.append(project[i].title);
     liElement.append(taskDiv);
 
     ulElement.append(liElement);
@@ -60,22 +61,22 @@ const addTaskToDom = (project) => {
   const newTaskLink = document.getElementById('newTaskLink');
   const projectId = newTaskLink.getAttribute('data-attribute');
   const editTaskLinks = document.getElementsByClassName('fa-pencil-alt');
-  for (let i = 0; i < editTaskLinks.length; i++) {
-    editTaskLinks[i].parentElement.addEventListener('click', (event) => {
+  for (let i = 0; i < editTaskLinks.length; i + 1) {
+    editTaskLinks[i].parentElement.addEventListener('click', () => {
       editTask(projectId, i);
     });
   }
 
   const viewTaskLinks = document.getElementsByClassName('fa-eye');
-  for (let i = 0; i < viewTaskLinks.length; i++) {
-    viewTaskLinks[i].parentElement.addEventListener('click', (event) => {
+  for (let i = 0; i < viewTaskLinks.length; i + 1) {
+    viewTaskLinks[i].parentElement.addEventListener('click', () => {
       showTask(projectId, i);
     });
   }
 
   const deleteTaskLinks = document.getElementsByClassName('fa-trash');
-  for (let i = 0; i < deleteTaskLinks.length; i++) {
-    deleteTaskLinks[i].parentElement.addEventListener('click', (event) => {
+  for (let i = 0; i < deleteTaskLinks.length; i + 1) {
+    deleteTaskLinks[i].parentElement.addEventListener('click', () => {
       deteleTask(projectId, i);
     });
   }

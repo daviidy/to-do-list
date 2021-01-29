@@ -1,4 +1,3 @@
-import Project from './project';
 import showProjectToDom from './showProjectToDom';
 
 const showProject = (projectId) => {

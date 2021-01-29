@@ -4,11 +4,11 @@ const showTaskToDom = (task) => {
     column.removeChild(column.lastChild);
   }
   const title = document.createElement('h3');
-  title.innerHTML = task._title;
+  title.innerHTML = task.title;
   const description = document.createElement('p');
-  description.innerHTML = task._description;
+  description.innerHTML = task.description;
   const dueDate = document.createElement('p');
-  dueDate.innerHTML = `Due Date: ${task._dueDate}`;
+  dueDate.innerHTML = `Due Date: ${task.dueDate}`;
 
   column.append(title);
   column.append(description);

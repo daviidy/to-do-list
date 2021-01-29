@@ -1,7 +1,6 @@
 import addTaskToDom from '../todos/addTaskToDom';
 
 const showProjectToDom = (project, id) => {
-  const projectHoler = document.getElementById('projects-holder');
   const projectsList = document.getElementById('project-details');
   const tasks = document.getElementById('tasks');
   while (projectsList.firstChild) {
@@ -25,13 +24,13 @@ const showProjectToDom = (project, id) => {
   const iTag = document.createElement('i');
   iTag.classList.add('fas', 'fa-plus');
 
-  item.innerHTML = project._title;
+  item.innerHTML = project.title;
   link.innerHTML = 'Add a new task';
   link.append(iTag);
   projectsList.prepend(link);
   projectsList.prepend(item);
 
-  addTaskToDom(project._todos);
+  addTaskToDom(project.todos);
 };
 
 export default showProjectToDom;
