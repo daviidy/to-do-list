@@ -1,11 +1,12 @@
+/* eslint-disable no-plusplus */
 const index = () => {
-  let values = {}
-  let keys = Object.keys(localStorage),
-  i = keys.length
-  while(i--){
-    values[keys[i]] = localStorage.getItem(keys[i])
+  const values = {};
+  const keys = Object.keys(localStorage);
+  let i = keys.length;
+  while (i--) {
+    values[keys[i]] = localStorage.getItem(keys[i]);
   }
-  return values 
-}
+  return values;
+};
 
-export default index
+export default index;
