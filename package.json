@@ -4,6 +4,9 @@
   "description": "This is the second project in the Microverse Javascript module. The goal of the project is to learn basic webpack, ES6 modules and classes.",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
