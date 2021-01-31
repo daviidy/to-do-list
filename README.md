@@ -1,4 +1,4 @@
-# restaurant-page
+# Todo-List
 This is the third project in the Microverse Javascript module. The goal of the project is to build a todo app with webpack, ES6 modules and classes.
 
 ## Project screenshot
