@@ -4,7 +4,7 @@
   "description": "This is the second project in the Microverse Javascript module. The goal of the project is to learn basic webpack, ES6 modules and classes.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   "homepage": "https://github.com/daviidy/to-do-list#readme",
   "devDependencies": {
     "css-loader": "^5.0.1",
+    "jest": "^26.6.3",
     "style-loader": "^2.0.0",
     "webpack": "^5.17.0",
     "webpack-cli": "^4.4.0"
