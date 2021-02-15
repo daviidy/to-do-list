@@ -28,6 +28,9 @@ You can find the demo [here](https://daviidy.github.io/to-do-list/)
 - run `npx webpack`
 - open index.html with your browser
 
+## To run the tests
+- npm run test
+
 ## 👨🏽‍💻 👨🏿‍💻 Creators
 
 👤 **Author1**
