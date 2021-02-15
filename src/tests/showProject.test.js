@@ -1,4 +1,4 @@
-import Project from '../components/projects/project';
+/* eslint-disable no-underscore-dangle */
 import 'jest-localstorage-mock';
 import addProject from '../components/projects/addProject';
 import showProject from '../components/projects/showProject';

@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import Project from '../components/projects/project';
 
 test('create project successfully', () => {

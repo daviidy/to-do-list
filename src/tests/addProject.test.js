@@ -1,4 +1,3 @@
-import Project from '../components/projects/project';
 import 'jest-localstorage-mock';
 import addProject from '../components/projects/addProject';
 
