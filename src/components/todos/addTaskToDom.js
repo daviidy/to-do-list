@@ -87,4 +87,4 @@ const addTaskToDom = (project) => {
   }
 };
 
-export default addTaskToDom
+export default addTaskToDom;

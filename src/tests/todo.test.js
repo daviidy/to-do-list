@@ -5,12 +5,12 @@ test('create task successfully', () => {
     'one task',
     'any description',
     '2021-02-15',
-    1
+    1,
   );
   expect(todo).toEqual({
     _title: 'one task',
     _description: 'any description',
     _dueDate: '2021-02-15',
-    _priority: 1
+    _priority: 1,
   });
 });

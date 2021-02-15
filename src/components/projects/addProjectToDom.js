@@ -22,4 +22,4 @@ const addProjectToDom = (project, projectId) => {
   });
 };
 
-export default addProjectToDom
+export default addProjectToDom;
