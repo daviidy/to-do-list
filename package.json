@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "This is the second project in the Microverse Javascript module. The goal of the project is to learn basic webpack, ES6 modules and classes.",
   "main": "index.js",
+  "jest": {
+    "setupFiles": ["jest-localstorage-mock"]
+  },
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open" ,
+    "start": "webpack-dev-server --mode development --open",
     "test": "jest"
   },
   "repository": {
@@ -22,6 +25,7 @@
   "devDependencies": {
     "css-loader": "^5.0.1",
     "jest": "^26.6.3",
+    "jest-localstorage-mock": "^2.4.6",
     "style-loader": "^2.0.0",
     "webpack": "^5.17.0",
     "webpack-cli": "^4.4.0"

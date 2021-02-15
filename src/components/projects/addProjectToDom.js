@@ -1,4 +1,6 @@
 import showProject from './showProject';
+import showProjectToDom from './showProjectToDom';
+
 
 const addProjectToDom = (project, projectId) => {
   const projectsList = document.getElementById('projectsList');
@@ -15,7 +17,8 @@ const addProjectToDom = (project, projectId) => {
 
   link.addEventListener('click', (event) => {
     event.preventDefault();
-    showProject(projectId);
+    const selectedProject = showProject(projectId);
+    showProjectToDom(selectedProject, projectId);
   });
 };
 

@@ -21,7 +21,8 @@ const titleProject = document.getElementById('titleProject');
 buttonProject.addEventListener('click', (event) => {
   event.preventDefault();
   if (titleProject.value !== '') {
-    addProject(titleProject.value);
+    const project = addProject(titleProject.value);
+    addProjectToDom(titleProject.value, project);
   }
 });
 
