@@ -14,7 +14,6 @@ const showProjectToDom = (project, id) => {
   const item = document.createElement('h2');
   item.classList.add('font-weight-bold');
 
-
   const link = document.createElement('a');
   link.classList.add('text-dark');
   link.classList.add('pointer');
@@ -33,5 +32,6 @@ const showProjectToDom = (project, id) => {
 
   addTaskToDom(project._todos);
 };
+
 
 export default showProjectToDom;

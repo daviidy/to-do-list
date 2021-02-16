@@ -18,11 +18,11 @@ Object.entries(projects).map(([key, value]) => {
 const buttonProject = document.getElementById('newProjectButton');
 const titleProject = document.getElementById('titleProject');
 
-// add a new project
 buttonProject.addEventListener('click', (event) => {
   event.preventDefault();
   if (titleProject.value !== '') {
-    addProject(titleProject.value);
+    const project = addProject(titleProject.value);
+    addProjectToDom(titleProject.value, project);
   }
 });
 

@@ -6,6 +6,7 @@ import editTask from './editTask';
 import showTask from './showTask';
 import deteleTask from './deleteTask';
 
+
 const addTaskToDom = (project) => {
   const tasks = document.getElementById('tasks');
 
@@ -44,6 +45,7 @@ const addTaskToDom = (project) => {
 
     const iTagDelete = document.createElement('i');
     iTagDelete.classList.add('fas', 'fa-trash', 'text-danger');
+
 
     // appending elements
     taskDiv.append(linkEdit);
@@ -84,4 +86,5 @@ const addTaskToDom = (project) => {
     });
   }
 };
+
 export default addTaskToDom;
